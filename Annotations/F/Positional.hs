@@ -11,7 +11,7 @@ import Annotations.F.Annotated
 
 import Data.Foldable (Foldable, toList)
 import Data.Ord
-import Data.List
+import Data.List (sortBy)
 import Data.Maybe
 import Control.Applicative
 

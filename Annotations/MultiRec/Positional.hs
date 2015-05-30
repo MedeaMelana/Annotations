@@ -13,7 +13,7 @@ import Generics.MultiRec.Base
 import Generics.MultiRec.HFunctor
 
 import Data.Maybe
-import Data.List
+import Data.List (sortBy)
 import Data.Ord
 import Control.Applicative
 

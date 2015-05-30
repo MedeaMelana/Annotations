@@ -34,7 +34,7 @@ class Monad m => MonadYield m where
 
 -- | The Yield transformer. Allows yielding generic values in family @fam@ with annotations of type @x@.
 newtype YieldT x fam m a = YieldT (StateT [AnyAnnFix x fam] m a)
-  deriving (Functor, Monad)
+  deriving (Functor, Applicative, Monad)
 
 runYieldTG :: Monad m => YieldT x fam m a -> m (a, Maybe (AnyAnnFix x fam))
 runYieldTG (YieldT y) = do
