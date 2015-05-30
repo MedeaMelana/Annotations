@@ -27,7 +27,7 @@ pExpr = do
   left <- getPos
   ex <- pAdd
   P.option ex $ do
-    pToken TDoubleColon
+    void (pToken TDoubleColon)
     ty <- pType
     mkBounded Expr left (ETyped ex ty)
 
@@ -52,13 +52,13 @@ pType = pTyInt <|> pTyTuple
 pTuple :: Tuples ix -> ExprParser ix -> (ix -> ix -> ix) -> ExprParser ix
 pTuple w pEl f = do
   left <- getPos
-  pToken TLParen
+  void (pToken TLParen)
   lhs <- pEl
   ty <- P.option lhs $ do
-    pToken TComma
+    void (pToken TComma)
     rhs <- pEl
     mkBounded w left (f lhs rhs)
-  pToken TRParen
+  void (pToken TRParen)
   return ty
 
 pTyTuple :: ExprParser Type

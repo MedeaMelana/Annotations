@@ -6,16 +6,16 @@ module F.ExprParser (
 
 import F.ExprLexer
 import F.Expr
+
 import Annotations.Bounds
 import Annotations.BoundsParser
 import Annotations.F.Annotated
 import Annotations.F.ParserCombinators
 
-import qualified Text.Parsec as P
-
-import Data.Function
 import Control.Applicative
 import Control.Monad.Identity
+import Data.Function
+import qualified Text.Parsec as P
 
 
 -- | A bounds parser that works on 'ExprToken's.

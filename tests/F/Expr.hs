@@ -4,9 +4,7 @@ import Annotations.Bounds
 import Annotations.F.Annotated
 import Annotations.F.Fixpoints
 
-import Data.Foldable
 import Data.Traversable
-import Control.Applicative
 
 
 -- type  PositionalExpr = (Bounds, PositionalExpr')

@@ -9,7 +9,7 @@
 module MultiRec.ExprExpl where
 
 import Generics.MultiRec
-import Control.Applicative
+
 
 data Expr
   = EAdd     Expr  Expr

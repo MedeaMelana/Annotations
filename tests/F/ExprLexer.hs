@@ -9,10 +9,9 @@ module F.ExprLexer (
 
 import Annotations.BoundsParser
 
-import qualified Text.Parsec as P
-
 import Data.Maybe (fromJust)
 import Control.Applicative
+import qualified Text.Parsec as P
 
 
 -- | Tokens in the language.
