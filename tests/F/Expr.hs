@@ -4,6 +4,8 @@ import Annotations.Bounds
 import Annotations.F.Annotated
 import Annotations.F.Fixpoints
 
+import Control.Applicative (Applicative(..), (<$>))
+import Data.Foldable (Foldable(..))
 import Data.Traversable
 
 

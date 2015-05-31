@@ -20,7 +20,6 @@ import Annotations.MultiRec.Any
 import Control.Monad.Writer (Writer, execWriter, tell)
 
 import Generics.MultiRec hiding (show)
-import Generics.MultiRec.HFix
 import Annotations.MultiRec.Zipper
 import Annotations.MultiRec.ZipperFix
 

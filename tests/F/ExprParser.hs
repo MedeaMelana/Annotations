@@ -13,8 +13,6 @@ import Annotations.F.Annotated
 import Annotations.F.ParserCombinators
 
 import Control.Applicative
-import Control.Monad.Identity
-import Data.Function
 import qualified Text.Parsec as P
 
 

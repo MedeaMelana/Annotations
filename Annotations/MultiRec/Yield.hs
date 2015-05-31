@@ -11,11 +11,11 @@ module Annotations.MultiRec.Yield
   , runYield, runYieldG, runYieldT, runYieldTG
   ) where
 
+import Control.Applicative (Applicative)
 import Control.Monad.State.Strict
 import Control.Monad.Identity
 
 import Generics.MultiRec hiding (show)
-import Generics.MultiRec.HFix
 
 import Annotations.MultiRec.Annotated
 import Annotations.MultiRec.Any

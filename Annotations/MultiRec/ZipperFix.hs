@@ -44,11 +44,11 @@ left            :: Nav
 
 down  (Loc p (HIn x) s      ) = first (\p' z c  -> Loc p' z (Push p c  s)) x
 down' (Loc p (HIn x) s      ) = last  (\p' z c  -> Loc p' z (Push p c  s)) x
-up    (Loc p x Empty        ) = Nothing
+up    (Loc _ _ Empty        ) = Nothing
 up    (Loc p x (Push p' c s)) = return (Loc p' (HIn $ fill p c x) s)
-right (Loc p x Empty        ) = Nothing
+right (Loc _ _ Empty        ) = Nothing
 right (Loc p x (Push p' c s)) = next (\p z c' -> Loc p z (Push p' c' s)) p c x
-left  (Loc p x Empty        ) = Nothing
+left  (Loc _ _ Empty        ) = Nothing
 left  (Loc p x (Push p' c s)) = prev (\p z c' -> Loc p z (Push p' c' s)) p c x
 
 -- ** Derived navigation.
