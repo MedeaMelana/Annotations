@@ -1,5 +1,5 @@
 Name:           Annotations
-Version:        0.2
+Version:        0.2.1
 Synopsis:       Constructing, analyzing and destructing annotated trees
 Description:
   @Annotations@ provides utility functions to make working with annotated trees easier. There are two implementations: one for working with open datatypes that explicitly make their child positions accessible through a type argument, and one for working with MultiRec datatypes.
@@ -10,7 +10,7 @@ Description:
 
 Author:         Martijn van Steenbergen
 Maintainer:     martijn@van.steenbergen.nl
-Copyright:      Copyright (c) 2008-2009 Martijn van Steenbergen
+Copyright:      Copyright (c) 2008-2015 Martijn van Steenbergen
 
 Cabal-Version:  >= 1.8
 License:        BSD3
