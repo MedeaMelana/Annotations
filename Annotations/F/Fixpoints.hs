@@ -22,7 +22,13 @@ import Control.Monad
 newtype Fix fT  = In    { out      :: fT (Fix fT)  }
 
 deriving instance Show (f (Fix f)) => Show (Fix f)
-deriving instance Eq (f (Fix f)) => Eq (Fix f)
+-- deriving instance Eq (f (Fix f)) => Eq (Fix f)
+--
+-- Deriving this instance results in compilation taking forever on GHC 8.0.1
+-- and later (see https://ghc.haskell.org/trac/ghc/ticket/12234). This is
+-- a workaround until that issue is fixed.
+instance Eq (f (Fix f)) => Eq (Fix f) where
+  In x == In y = x == y
 
 mapFix :: (f (Fix f) -> g (Fix g)) -> Fix f -> Fix g
 mapFix f = In . f . out
